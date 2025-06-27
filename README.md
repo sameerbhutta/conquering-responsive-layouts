@@ -21,7 +21,7 @@ conquering-responsive-layouts/
 │ ├── logo.svg
 │ └── the-image.jpg
 └── design/
-└── website-mockup.pdf
+  └── website-mockup.pdf
 ```
 
 - `index.html` — Main structure using semantic HTML5.
