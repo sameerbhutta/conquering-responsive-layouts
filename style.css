@@ -1,0 +1,374 @@
+:root {
+    --primary-font: 'Oswald', sans-serif;
+    --primary-bg: #2E323F;
+    --accent-color: #A59678;
+    --secondary-bg: #3B4050;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* === Media Elements === */
+img {
+    max-width: 100%;
+}
+
+/* === Container Utility === */
+.container {
+    width: 80%;
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+/* === Buttons === */
+.btn {
+    text-transform: uppercase;
+    color: white;
+    background-color: var(--accent-color);
+    border: none;
+    border-radius: 100px;
+    transition: 0.2s ;
+}
+
+.btn:hover, .btn:focus {
+    opacity: 75%;
+}
+
+/* === Links === */
+a {
+    color: white;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+a:hover, a:focus {
+    transition: 0.2s;
+    opacity: 50%;
+}
+
+.nav-branding a {
+    opacity: 100%;
+}
+
+footer a {
+    text-transform: none;
+    line-height: 1.75rem;
+}
+
+/* === Header & Nav === */
+header {
+    background-color: var(--primary-bg);
+    position: relative;
+    z-index: 8;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 70px;
+}
+
+/* === Hamburger Menu === */
+.hamburger {
+    display: block;
+    cursor: pointer;
+}
+
+.bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    background-color: #fff;
+    transition: all 0.3s ease-in-out;
+}
+
+/* === Hamburger animation when active === */
+.hamburger.active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+}
+
+.hamburger.active .bar:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+}
+
+/* === Nav Menu === */
+.nav-menu {
+    position: fixed;
+    z-index: 5;
+    left: -100%;
+    top: 70px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+    background-color: var(--primary-bg);
+    transition: 0.3s;
+    gap: 0;
+    flex-shrink: 1;
+}
+
+.nav-menu > * {
+    margin: 16px 0;
+    font-family: var(--primary-font);
+    font-size: 1.12rem;
+    letter-spacing: 0.15rem;
+}
+
+.nav-btn {
+    padding: 0.25em 0.8em;
+    font-size: 1.15rem;
+    font-family: var(--primary-font);
+    letter-spacing: 0.15rem;
+}
+
+.nav-menu.active {
+    left: 0;
+}
+
+body.menu-open {
+    overflow: hidden;
+}
+
+/* === Overlay (behind menu) === */
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    backdrop-filter: blur(3px);
+    background-color: rgba(0, 0, 0, 0);
+    z-index: 1;
+    display: none;
+}
+
+.overlay.active {
+    display: block;
+}
+
+/* === Hero Section === */
+.hero {
+    background-color: var(--secondary-bg);
+    padding: 1.5em 0;
+    color: #fff;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 1.8rem;
+    font-family: var(--primary-font);
+    letter-spacing: 2px;
+    line-height: 4rem;
+}
+
+.hero h1 span {
+    color: var(--accent-color);
+    font-family: var(--primary-font);
+}
+
+.hero .hero-para {
+    font-size: 1.2rem;
+}
+
+.hero-btn {
+    padding: 0.5em 0.75em;
+    font-size: 1.2rem;
+    letter-spacing: 3px;
+    font-family: var(--primary-font);
+    margin: 1.3rem 0 0.5rem 0;
+}
+
+/* === Second Section === */
+.second {
+    background-color: #f2f2f2;
+    text-align: center;
+}
+
+.second h3{
+    color: var(--accent-color);
+    font-family: var(--primary-font);
+    font-size: 1.35rem;
+}
+
+.second-section-para {
+    padding: 1.5rem 0;
+}
+
+.second-section-para h3 {
+    margin-bottom: 0.5em;
+}
+
+/* === Third Section === */
+.third {
+    margin: 1.5rem 0;
+}
+
+.third h2{
+    font-family: var(--primary-font);
+    color: var(--accent-color);
+}
+
+.third-section-para:last-of-type {
+    margin: 1.5em 0;
+}
+
+/* === Third Section's Sidebar === */
+.sidebar > div {
+    background-color: var(--secondary-bg);
+    color: #fff;
+    text-align: center;
+}
+
+.sidebar > div h3 {
+    font-family: var(--primary-font);
+    letter-spacing: 1.5px;
+    font-size: 1.3rem;
+    margin-bottom: 0.8em;
+}
+
+.sidebar-card {
+    padding: 1.2em 1.8em 1.8em 1.8em;
+    margin-bottom: 1.5em;
+}
+
+/* === Footer === */
+footer {
+    background-color: var(--secondary-bg);
+    text-align: center;
+    padding: 1rem 0;
+}
+
+footer h3 {
+    font-family: var(--primary-font);
+    color: var(--accent-color);
+    font-size: 1.35rem;
+}
+
+footer h2 {
+    font-family: var(--primary-font);
+    color: white;
+    font-size: 2.2rem;
+    margin: 0.5rem 0;
+}
+
+footer p {
+    color: #fff;
+}
+
+footer a {
+    display: block;
+}
+
+.footer-para, .footer-links {
+    margin: 1.3rem 0;
+}
+
+.footer-para > *, .footer-links > * {
+    margin-bottom: 0.3em;
+}
+
+.footer-para {
+    padding:  0 0.5rem;
+}
+
+/* === Scrollbar Customization === */
+
+::-webkit-scrollbar {
+    width: 0.8rem;
+}
+
+::-webkit-scrollbar-track {
+    background: #2a2d38;
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--accent-color);
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #756b56;
+}
+
+/* === Responsive Media Queries === */
+@media (min-width: 700px) {
+    .hamburger {
+        display: none;
+    }
+
+    .nav-menu {
+        position: static;
+        flex-direction: row;
+        justify-content: flex-end;
+        align-items: center;
+        gap: 20px;
+        left: 0;
+        top: 0;
+        display: flex;
+        background-color: transparent;
+    }
+
+    .nav-menu > * {
+        margin: 0;
+    }
+}
+
+@media (min-width: 950px) {
+    nav .nav-branding img {
+        min-width: 125%;
+    }
+
+    .nav-menu * {
+        font-size: 1.125rem;
+    }
+
+    .hero > .container {
+        text-align: left;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        padding: 2em 0;
+        align-items: last baseline;
+        column-gap: 7rem;
+    }
+
+    .hero h1 {
+        font-size: 4.5rem;
+        line-height: 6rem;
+    }
+
+    .hero-para {
+        max-width: 500px;
+        font-size: 1.5rem;
+    }
+
+    .second .container {
+        display: flex;
+        gap: 5rem;
+        padding: 2.85rem 0;
+    }
+
+    .third .container {
+        display: flex;
+        gap: 10%;
+    }
+
+    .sidebar {
+        padding-top: 0.8rem;
+    }
+
+    footer .grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        font-size: 1rem;
+    }
+}
