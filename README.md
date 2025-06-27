@@ -8,6 +8,7 @@ This project is the final challenge of the **"Conquering Responsive Layouts"** c
 
 ## 📁 File Structure
 
+```
 conquering-responsive-layouts/
 │
 ├── index.html
@@ -21,6 +22,7 @@ conquering-responsive-layouts/
 │ └── the-image.jpg
 └── design/
 └── website-mockup.pdf
+```
 
 - `index.html` — Main structure using semantic HTML5.
 - `style.css` — CSS built with mobile-first approach and responsive best practices.
